@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USRowing | Amazon.com</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Amazon Ember', Arial, sans-serif; }
+        
+        /* Amazon Header */
+        .amazon-header { background: #131921; color: white; padding: 8px 20px; display: flex; align-items: center; gap: 20px; position: sticky; top: 0; z-index: 1000; }
+        .amazon-logo { font-size: 24px; font-weight: bold; }
+        .location { font-size: 12px; }
+        .search-bar { flex: 1; display: flex; max-width: 900px; }
+        .search-bar select { padding: 10px; border: none; background: #f3f3f3; border-radius: 4px 0 0 4px; }
+        .search-bar input { flex: 1; padding: 10px; border: none; }
+        .search-bar button { padding: 10px 15px; background: #febd69; border: none; border-radius: 0 4px 4px 0; cursor: pointer; }
+        .header-right { display: flex; gap: 20px; align-items: center; font-size: 12px; }
+        .cart { display: flex; align-items: center; gap: 5px; }
+        
+        /* Navigation Bar */
+        .nav-bar { background: #232f3e; color: white; padding: 10px 20px; display: flex; gap: 25px; font-size: 14px; overflow-x: auto; }
+        .nav-bar a { color: white; text-decoration: none; white-space: nowrap; }
+        
+        /* Brand Store Content */
+        .brand-container { max-width: 1500px; margin: 0 auto; }
+        
+        /* USRowing Logo Section */
+        .brand-header { text-align: center; padding: 40px 20px; background: white; }
+        .brand-logo { max-width: 600px; margin: 0 auto; }
+        .brand-logo img { width: 100%; }
+        
+        /* Breadcrumb */
+        .breadcrumb { padding: 15px 20px; font-size: 12px; color: #565959; }
+        
+        /* Store Navigation */
+        .store-nav { background: white; padding: 20px; display: flex; justify-content: center; align-items: center; gap: 30px; border-bottom: 1px solid #ddd; flex-wrap: wrap; }
+        .follow-btn { padding: 8px 20px; border: 1px solid #ddd; background: white; border-radius: 20px; cursor: pointer; }
+        .share-btn { padding: 8px 15px; border: 1px solid #ddd; background: white; border-radius: 4px; cursor: pointer; }
+        .store-nav a { color: #0F1111; text-decoration: none; font-weight: 500; font-size: 14px; text-transform: uppercase; }
+        .store-nav a:hover { color: #C7511F; }
+        .more-btn { color: #0F1111; font-weight: 500; cursor: pointer; }
+        .search-store { padding: 8px 15px; border: 1px solid #ddd; border-radius: 4px; width: 200px; }
+        
+        /* Hero Banner */
+        .hero-banner { position: relative; width: 100%; height: 500px; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><rect fill="%23e8f4f8" width="1200" height="500"/></svg>'); background-size: cover; display: flex; align-items: center; justify-content: center; }
+        .hero-content { text-align: center; color: white; z-index: 1; }
+        .hero-content h1 { font-size: 48px; font-weight: bold; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero-content p { font-size: 18px; margin-bottom: 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        .hero-btn { padding: 12px 40px; background: white; color: #0F1111; border: none; border-radius: 4px; font-size: 14px; font-weight: bold; cursor: pointer; }
+        .hero-btn:hover { background: #f0f0f0; }
+        
+        /* Product Tiles */
+        .product-section { padding: 40px 20px; }
+        .product-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto; }
+        .product-tile { background: white; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; cursor: pointer; transition: box-shadow 0.3s; }
+        .product-tile:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .product-tile img { width: 100%; height: 280px; object-fit: cover; background: #f0f0f0; }
+        .product-info { padding: 15px; }
+        .product-title { font-size: 14px; color: #0F1111; margin-bottom: 8px; }
+        .product-price { font-size: 18px; color: #B12704; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <!-- Amazon Header -->
+    <div class="amazon-header">
+        <div class="amazon-logo">amazon</div>
+        <div class="location">
+            <div style="font-size: 10px;">Deliver to Rotterdam 97818</div>
+            <div style="font-weight: bold;">Update location</div>
+        </div>
+        <div class="search-bar">
+            <select><option>All</option></select>
+            <input type="text" placeholder="Search Amazon">
+            <button>🔍</button>
+        </div>
+        <div class="header-right">
+            <div>
+                <div>Hello, sign in</div>
+                <div style="font-weight: bold;">Account & Lists</div>
+            </div>
+            <div>
+                <div>Returns</div>
+                <div style="font-weight: bold;">& Orders</div>
+            </div>
+            <div class="cart">
+                <span style="font-size: 24px;">🛒</span>
+                <span style="font-weight: bold;">0</span>
+                <span>Cart</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="#">☰ All</a>
+        <a href="#">Amazon Haul</a>
+        <a href="#">Medical Care</a>
+        <a href="#">Amazon Basics</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Prime</a>
+        <a href="#">Books</a>
+        <a href="#">Registry</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Smart Home</a>
+        <a href="#">New Releases</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Pharmacy</a>
+        <a href="#">Sell</a>
+        <a href="#">Music</a>
+        <a href="#">Fashion</a>
+        <a href="#">Amazon Home</a>
+        <a href="#">Automotive</a>
+        <a href="#">Toys & Games</a>
+        <a href="#">Baby</a>
+        <a href="#">Sports & Outdoors</a>
+        <a href="#">Home Improvement</a>
+        <a href="#">Shop By Interest</a>
+        <a href="#">Kindle Books</a>
+    </div>
+    
+    <div class="brand-container">
+        <!-- USRowing Logo -->
+        <div class="brand-header">
+            <img src="https://trainatchulavista.com/wp-content/uploads/2023/04/usrow1.jpg" style="width: 100%; max-height: 400px; object-fit: cover;">
+        </div>
+        
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">USRowing > home</div>
+        
+        <!-- Store Navigation -->
+        <div class="store-nav">
+            <button class="follow-btn">Follow</button>
+            <button class="share-btn">🔗</button>
+            <a href="#home">HOME</a>
+            <a href="#women">WOMEN</a>
+            <a href="#men">MEN</a>
+            <a href="#unisex">UNISEX</a>
+            <a href="https://strokeside.com/" target="_blank">SHOP THE STROKESIDE COLLECTION</a>
+            <a href="#headwear">HEADWEAR</a>
+            <a href="#accessories">ACCESSORIES</a>
+            <a href="#jewelry">JEWELRY</a>
+            <a href="#ornaments">🎄 ORNAMENTS</a>
+            <span class="more-btn">MORE ▼</span>
+            <input type="text" class="search-store" placeholder="🔍 Search all USRowing">
+        </div>
+        
+        <!-- Hero Banner -->
+        <div class="hero-banner" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://usrowing.org/_next/image?url=https%3A%2F%2Fusrowing-craft-storage-production.nyc3.digitaloceanspaces.com%2Fstaging%2FMarketplace-Varsity.png&w=1920&q=90'); background-size: cover; background-position: center;">
+            <div class="hero-content">
+                <h1>THE AMAZON X USROWING CAPSULE</h1>
+                <p>Shop Amazon Exclusive Merch</p>
+                <button class="hero-btn">SHOP NOW</button>
+            </div>
+        </div>
+        
+        <!-- Product Tiles -->
+        <div class="product-section">
+            <h2 style="font-size: 24px; margin-bottom: 20px; padding: 0 20px;">Strokeside Designs</h2>
+            
+            <h2 style="font-size: 24px; margin: 40px 0 20px; padding: 0 20px;">Women's Collection</h2>
+            <div class="product-tiles">
+                <div class="product-tile">
+                    <img src="https://shop.usrowing.org/cdn/shop/files/Women_s_Criss-Cross_Bra_2.0_black_3000x.jpg?v=1763318904" style="height: 280px; width: 100%; object-fit: cover;">
+                    <div class="product-info">
+                        <div class="product-title">Criss-Cross Bra 2.0 USRowing</div>
+                        <div class="product-price">$45.00</div>
+                    </div>
+                </div>
+                <div class="product-tile">
+                    <img src="https://shop.usrowing.org/cdn/shop/files/Women_s_Striaght_Tank_1_3000x.jpg?v=1763317870" style="height: 280px; width: 100%; object-fit: cover;">
+                    <div class="product-info">
+                        <div class="product-title">Straight Tank Top USRowing Women's</div>
+                        <div class="product-price">$30.00 <span style="text-decoration: line-through; color: #565959; font-size: 14px;">$45.00</span></div>
+                    </div>
+                </div>
+                <div class="product-tile">
+                    <img src="https://shop.usrowing.org/cdn/shop/files/Women_s_Agile_T-shirt_black_3000x.jpg?v=1763326323" style="height: 280px; width: 100%; object-fit: cover;">
+                    <div class="product-info">
+                        <div class="product-title">Agile T-shirt USRowing Women</div>
+                        <div class="product-price">$40.00</div>
+                    </div>
+                </div>
+                <div class="product-tile">
+                    <img src="https://shop.usrowing.org/cdn/shop/files/womens-longsleeve-upf-new_3000x.png?v=1742871727" style="height: 280px; width: 100%; object-fit: cover;">
+                    <div class="product-info">
+                        <div class="product-title">Performance Women's Long Sleeve UPF50+</div>
+                        <div class="product-price">$40.00 <span style="text-decoration: line-through; color: #565959; font-size: 14px;">$65.00</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 style="font-size: 28px; margin: 60px 0 20px; padding: 0 20px; text-align: center;">Shop 776BC</h2>
+            <div style="width: 100%; margin: 0 0 40px; position: relative;">
+                <img src="https://776bc.com/cdn/shop/files/Artboard_1_Better_824x.jpg?v=1744176577" style="width: 100%; height: auto; display: block;">
+                <a href="https://776bc.com/pages/usrowing?srsltid=AfmBOoqqMwpAG-s8Bcgt2-fM4HzkbvAgpZA64q0CJu2OS04Wd6p5gi5h" target="_blank" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; color: #131921; padding: 15px 40px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">SHOP</a>
+            </div>
+            
+            <h2 style="font-size: 28px; margin: 60px 0 30px; padding: 0 20px; text-align: center;">Official Merch</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 0 20px; margin-bottom: 40px;">
+                <a href="#apparel" style="text-decoration: none; color: inherit;">
+                    <div style="background: linear-gradient(135deg, #1a2a4e 0%, #0d1b3e 100%); height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; transition: transform 0.2s;">
+                        <span style="font-size: 18px; font-weight: 600; color: white;">Apparel</span>
+                    </div>
+                </a>
+                <a href="#headwear" style="text-decoration: none; color: inherit;">
+                    <div style="background: linear-gradient(135deg, #1a2a4e 0%, #0d1b3e 100%); height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; transition: transform 0.2s;">
+                        <span style="font-size: 18px; font-weight: 600; color: white;">Headwear</span>
+                    </div>
+                </a>
+                <a href="#accessories" style="text-decoration: none; color: inherit;">
+                    <div style="background: linear-gradient(135deg, #1a2a4e 0%, #0d1b3e 100%); height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; transition: transform 0.2s;">
+                        <span style="font-size: 18px; font-weight: 600; color: white;">Accessories</span>
+                    </div>
+                </a>
+                <a href="#jewelry" style="text-decoration: none; color: inherit;">
+                    <div style="background: linear-gradient(135deg, #1a2a4e 0%, #0d1b3e 100%); height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; transition: transform 0.2s;">
+                        <span style="font-size: 18px; font-weight: 600; color: white;">Jewelry</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
